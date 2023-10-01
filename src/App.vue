@@ -15,13 +15,12 @@ watch(cart, () => {
 
 onMounted(() => {
   productShowCase.value = db[3];
-
+  
+  products.value = db;
   const cartLS = localStorage.getItem('cart');
 
   if (cartLS) {
     cart.value = JSON.parse(cartLS);
-  } else {
-    cart.value = db
   }
 });
 
